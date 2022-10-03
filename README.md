@@ -1,1 +1,1 @@
-# ruby-linters
+# OOP School Library
