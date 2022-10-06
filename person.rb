@@ -2,6 +2,9 @@ require './nameable'
 require './decorator'
 
 class Person < Nameable
+  attr_accessor :name, :age
+  attr_reader :id, :rentals
+
   def initialize(age, name = 'unknown', parent_permission: true)
     @id = Random.rand(1..1000)
     @age = age
@@ -14,9 +17,6 @@ class Person < Nameable
   def add_rental(date, book)
     @rentals = Rental.new(date, book, self)
   end
-
-  attr_accessor :name, :age
-  attr_reader :id, :rentals
 
   def of_age?
     @age >= 18
