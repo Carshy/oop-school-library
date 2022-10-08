@@ -6,7 +6,6 @@ require './rental'
 require './classroom'
 
 class App
-
   attr_accessor :books, :people
 
   def initialize
@@ -45,9 +44,9 @@ class App
           puts "#{index + 1} - [Teacher] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
         end
       end
-     end
+    end
     puts '-----------------------------'
-   end
+  end
 
   def create_person
     print 'Which person do you want to create ? (1) for Teacher, (2) for Student : '
@@ -166,4 +165,4 @@ class App
     end
     puts '-----------------------------'
   end
-end 
+end
