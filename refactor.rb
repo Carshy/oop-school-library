@@ -7,7 +7,7 @@ class Refactor
 
   def permission?(parent_permission)
     print 'Has parent permission? [Y/N]: '
-    permission = gets.chomp()
+    permission = gets.chomp
     case permission
     when 'n', 'N'
       !parent_permission
