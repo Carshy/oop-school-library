@@ -5,7 +5,7 @@ class Main
     puts 'Welcome to our School Library App'
     app = Refactor.new
     app.user_input
-end 
+  end
 end
 
 main = Main.new
