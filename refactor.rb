@@ -113,9 +113,9 @@ class Refactor
   def menu(choice)
     case choice
     when 1
-      display_books
+      @app.display_books
     when 2
-      list_of_people
+      @app.list_of_people
     when 3
       create_person
     when 4

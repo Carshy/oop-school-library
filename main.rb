@@ -7,7 +7,6 @@ class Main
     app.user_input
 end 
 end
-  
+
 main = Main.new
 main.start
-  
