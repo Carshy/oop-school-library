@@ -6,7 +6,7 @@ require './rental'
 require './classroom'
 
 class App
-  attr_accessor :books, :people
+  attr_accessor :title, :author, :books, :people
 
   def initialize
     @books = []
@@ -68,25 +68,33 @@ class App
     -----------------------------------"
   end
 
-  def create_rental(date, person_number, book_number)
-    rent = Rental.new(date, people[person_number.to_i - 1], books[book_number.to_i - 1])
-    @rentals << rent unless @rentals.include?(rent)
+  def create_rental()
+    puts 'Select a book from the following list by number'
+    @books.each_with_index { |book, idx| puts "#{idx}) Title: \"#{book.title}\" Author: #{book.author}" }
+    book_index = gets.chomp.to_i
+    puts 'Select a person from the following list by number (not id)'
+    @people.each_with_index do |person, idx|
+      puts "#{idx}) Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    end
+    person_index = gets.chomp.to_i
+    print 'Date (yyyy/mm/dd): '
+    date = gets.chomp
+    person = @people[person_index]
+    book = @books[book_index]
+    Rental.new(date, person, book)
     puts '-------- Rental Created -------'
     puts '-----------------------------'
   end
 
-  def rent_list_by_id(id)
-    if @rentals.empty?
-      puts 'No rental recorded !'
-    else
-      @rentals.select do |rent|
-        if rent.person.id == id.to_i
-          puts "Date: #{rent.date}, Book '#{rent.book.title}' by #{rent.book.author}"
-        else
-          puts "#{rent.person.name} does not reantal a book!"
-        end
-      end
+  def rent_list_by_id
+    print 'ID of person: '
+    person_id = gets.chomp.to_i
+    person = @people.find { |prsn| prsn.id == person_id }
+    rental = person.rentals
+    puts 'Rentals:'
+    rental.each do |item|
+      puts "Date: #{item.date}, Book: #{item.book.title}, by #{item.book.author}"
     end
-    puts '-----------------------------'
   end
+
 end

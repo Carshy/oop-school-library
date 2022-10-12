@@ -70,24 +70,8 @@ class Refactor
   end
 
   def creating_new_rental
-    puts '------------ Making a New Rental -----------'
-    puts ' Select a Book from the list below by the number'
-    @app.display_books
-    print ' Enter book number : '
-    book_number = gets.chomp
-    puts 'Select a Person from the list below by the number'
-    @app.list_of_people
-    person_number = gets.chomp
-    print ' Enter the Date e.g (2022/9/29) : '
-    date = gets.chomp
-    @app.create_rental(date, person_number, book_number)
-  end
-
-  def display_rental
-    puts '------------ Show Rental list by ID -----------'
-    print '\n Enter the person\'s ID : '
-    id = gets.chomp
-    @app.rent_list_by_id(id)
+    
+    @app.create_rental()
   end
 
   def display_people

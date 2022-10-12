@@ -40,7 +40,7 @@ class Main
     when 5
       @refactor.creating_new_rental
     when 6
-      @refactor.display_rental
+      @refactor.rent_list
     end
   end
 end
