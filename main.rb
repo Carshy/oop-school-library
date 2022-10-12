@@ -2,7 +2,6 @@ require './refactor'
 require './app'
 
 class Main
-
   def initialize
     @app = App.new
     @refactor = Refactor.new
