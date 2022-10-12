@@ -123,7 +123,7 @@ class Refactor
     when 5
       creating_new_rental
     when 6
-      rent_list_by_id
+      @app.rent_list_by_id
     end
   end
 end
