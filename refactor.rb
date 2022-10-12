@@ -89,4 +89,16 @@ class Refactor
     id = gets.chomp
     @app.rent_list_by_id(id)
   end
+
+  def display_people
+    @app.list_of_people
+  end
+
+  def display_books_list
+    @app.display_books
+  end
+
+  def rent_list
+    @app.rent_list_by_id
+  end
 end

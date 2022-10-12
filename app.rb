@@ -35,7 +35,7 @@ class App
   def list_of_people
     puts '----  List of All People -----'
     if @people.empty?
-      puts 'No People Registered !'
+      puts 'No People Registered!'
     else
       @people.each_with_index do |person, index|
         if person.instance_of?(Student)
@@ -75,11 +75,7 @@ class App
     puts '-----------------------------'
   end
 
-  def rent_list_by_id
-    puts '------------ Rental list by ID -----------'
-    print '\n Enter the person\'s ID : '
-    id = gets.chomp
-    puts '**** Rental list ****'
+  def rent_list_by_id(id)
     if @rentals.empty?
       puts 'No rental recorded !'
     else

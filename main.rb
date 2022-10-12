@@ -6,11 +6,6 @@ class Main
     @app = App.new
     @refactor = Refactor.new
   end
-  # def start
-  #   puts 'Welcome to our School Library App'
-  #   app = Refactor.new
-  #   app.user_input
-  # end
 
   def user_input
     puts "
@@ -35,9 +30,9 @@ class Main
   def menu(choice)
     case choice
     when 1
-      @app.display_books
+      @refactor.display_books_list
     when 2
-      @app.list_of_people
+      @refactor.display_people
     when 3
       @refactor.create_person
     when 4
@@ -45,7 +40,7 @@ class Main
     when 5
       @refactor.creating_new_rental
     when 6
-      @app.rent_list_by_id
+      @refactor.display_rental
     end
   end
 end
