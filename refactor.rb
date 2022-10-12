@@ -70,8 +70,7 @@ class Refactor
   end
 
   def creating_new_rental
-    
-    @app.create_rental()
+    @app.create_rental
   end
 
   def display_people

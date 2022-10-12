@@ -96,5 +96,4 @@ class App
       puts "Date: #{item.date}, Book: #{item.book.title}, by #{item.book.author}"
     end
   end
-
 end
