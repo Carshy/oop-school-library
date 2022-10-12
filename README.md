@@ -45,6 +45,12 @@ That's it! You can play with it as you wish :smile:
 - Twitter: [@Twitter](https://twitter.com/CarshyCollins)
 - Linkedin: [Linkedin](https://www.linkedin.com/in/collins-musoko-864881120/)
 
+👤 **Hamayoun Ali**
+
+- GitHub: [@Hamayounali](https://github.com/Hamayounali)
+- Twitter: [@hamayounAli6](https://twitter.com/hamayounAli6)
+- LinkedIn: [Humayoon Ali](https://www.linkedin.com/in/humayoon-ali-663ba2239)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
